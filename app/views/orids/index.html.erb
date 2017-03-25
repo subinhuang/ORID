@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orids.each do |orid| %>
+      <tr>
+        <td><%= orid.title %></td>
+        <td><%= orid.content %></td>
+        <td><%= link_to 'Show', orid %></td>
+        <td><%= link_to 'Edit', edit_orid_path(orid) %></td>
+        <td><%= link_to 'Destroy', orid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orid', new_orid_path %>

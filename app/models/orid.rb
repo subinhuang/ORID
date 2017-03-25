@@ -1,0 +1,2 @@
+class Orid < ApplicationRecord
+end
